@@ -1,0 +1,159 @@
+﻿# MeetFlow Git ignore rules
+# Keep source, documentation, screenshots, lockfiles, and configuration examples trackable.
+# Ignore generated artifacts, local machine state, model downloads, recordings, and build output.
+
+# Dependencies
+node_modules/
+**/node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Package-manager noise
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+
+# Next.js and frontend output
+.next/
+**/.next/
+out/
+**/out/
+dist/
+**/dist/
+coverage/
+**/coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Tauri, Rust, and native build output
+target/
+**/target/
+debug/
+release/
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.obj
+*.dll.lib
+*.exe.manifest
+*.rcgu.o
+
+# Tauri generated/runtime folders
+.tauri-dev-webview/
+**/.tauri-dev-webview/
+desktop-client/src-tauri/gen/
+desktop-client/src-tauri/binaries/*
+!desktop-client/src-tauri/binaries/.gitkeep
+
+# Local model downloads and AI runtime data
+models/
+**/models/
+**/model-cache/
+**/.cache/
+*.gguf
+*.ggml
+*.safetensors
+*.onnx
+*.ort
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Audio, video, transcripts, and local meeting data
+recordings/
+transcripts/
+chroma/
+meeting_minutes.db
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.ogg
+*.webm
+*.mp4
+*.mov
+*.mkv
+
+# Logs and diagnostics
+logs/
+**/logs/
+*.log
+dev-debug.log
+desktop-client-dev.log
+desktop-client-dev.err.log
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor and local tooling
+.vscode/
+.idea/
+.cursor/
+.agents/
+.codex/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.tmp
+*.temp
+
+# Local experiments and scratch space
+experiments/
+repo-tools/tmp/
+tmp/
+temp/
+
+# Vendored/downloaded installers and large local installers
+vs_buildtools.exe
+desktop-client/vs_buildtools.exe
+
+# Deployment/tool caches
+.vercel/
+.netlify/
+.turbo/
+
+# Legacy/generated service caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
